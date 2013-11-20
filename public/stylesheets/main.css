@@ -5,6 +5,9 @@ html {
 body {
   margin: 0;
   padding: 0;
+  height: 1000px;
+  width: 100%;
+  min-height: 500px;
 }
 .wrapper {
   width: 960px;
@@ -15,76 +18,67 @@ body {
   padding: 0;
   margin: 0 auto;
 }
-.left,
-.right {
-  height: 160px;
-  width: 70px;
-  border-radius: 90px;
-  background-color: #555;
-  opacity: 0.1;
-  float: left;
-  margin: 190px 0 0 20px;
-  border: 2px solid #000;
-}
-.right {
-  float: right;
-  margin: 190px 20px 0 0;
-}
-.left:hover,
-.right:hover {
-  opacity: 0.5;
-  border: 2px solid #555;
-}
 /* HEADER STYLES */
 header {
-  background-color: #222;
-  z-index: 10;
-  width: 100%;
-  height: 80px;
-  position: fixed;
-  top: 0;
-  left: 0;
+  height: 100%;
+  min-height: 200px;
+  background-image: url("../images/fpo-background-image.jpg");
+  background-position: center center;
+  background-size: cover;
 }
-header h2 {
-  font-size: 45px;
-  margin: 0;
-  padding: 16px 0 0 15px;
-  float: left;
-  color: #999;
+header .main-logo {
+  width: 700px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -350px;
+  margin-top: -175px;
 }
-header nav {
+header .scroll-down-box {
+  width: 150px;
+  height: 120px;
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  margin-left: -75px;
+}
+header .scroll-down-box .scroll-down-tag {
+  width: 150px;
+  position: absolute;
+}
+header .scroll-down-box .anchor-pointer {
+  left: 40px;
+  width: 60px;
+  position: absolute;
+  bottom: 0px;
+  -webkit-animation-name: bounce;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-fill-mode: backwards;
+  -webkit-animation-iteration-count: infinite;
+}
+nav {
   float: right;
   width: 440px;
   height: 30px;
   padding: 30px 15px 0 0;
 }
-header nav li.nav-link {
+nav li.nav-link {
   display: inline-block;
   list-style: none;
   font-size: 20px;
   padding-left: 25px;
-  color: #999;
+  color: #fff;
 }
-header nav li.nav-link:hover {
+nav li.nav-link:hover {
   color: #bbb;
   cursor: pointer;
-}
-/* MAIN PAGE CONTENT */
-.bigImage {
-  margin-top: 100px;
-  width: 100%;
-  height: 600px;
-  background-position: center center;
-  background-size: cover;
 }
 /* DUMMY PAGES */
 .about,
 .code {
-  width: 900px;
-  height: 400px;
-  background-color: #c1c1c1;
-  border-radius: 5px;
-  margin: 20px auto;
+  width: 100%;
+  height: 500px;
+  background-color: #90ada5;
 }
 /* FOOTER STYLES */
 footer {
@@ -106,4 +100,84 @@ footer ul li.footer-link {
 footer ul li.footer-link:hover {
   color: #333;
   cursor: pointer;
+}
+@-moz-keyframes bounce {
+  0% {
+    bottom: 10px;
+    animation-timing-function: ease-out;
+  }
+
+  55% {
+    bottom: 5px;
+    animation-timing-function: ease-out;
+  }
+
+  100% {
+    bottom: 10px;
+    animation-timing-function: ease-out;
+  }
+}
+@-webkit-keyframes bounce {
+  0% {
+    bottom: 10px;
+    animation-timing-function: ease-out;
+  }
+
+  55% {
+    bottom: 5px;
+    animation-timing-function: ease-out;
+  }
+
+  100% {
+    bottom: 10px;
+    animation-timing-function: ease-out;
+  }
+}
+@-o-keyframes bounce {
+  0% {
+    bottom: 10px;
+    animation-timing-function: ease-out;
+  }
+
+  55% {
+    bottom: 5px;
+    animation-timing-function: ease-out;
+  }
+
+  100% {
+    bottom: 10px;
+    animation-timing-function: ease-out;
+  }
+}
+@-ms-keyframes bounce {
+  0% {
+    bottom: 10px;
+    animation-timing-function: ease-out;
+  }
+
+  55% {
+    bottom: 5px;
+    animation-timing-function: ease-out;
+  }
+
+  100% {
+    bottom: 10px;
+    animation-timing-function: ease-out;
+  }
+}
+@keyframes bounce {
+  0% {
+    bottom: 10px;
+    animation-timing-function: ease-out;
+  }
+
+  55% {
+    bottom: 5px;
+    animation-timing-function: ease-out;
+  }
+
+  100% {
+    bottom: 10px;
+    animation-timing-function: ease-out;
+  }
 }

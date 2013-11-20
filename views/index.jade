@@ -1,12 +1,28 @@
-extends layout
+doctype 5
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/bower_components/normalize-css/normalize.css')
+    link(rel='stylesheet', href='/stylesheets/main.css')
+  body
+    header
+      div.wrapper
+        img(src="images/hand-coded-logo.svg" class="main-logo")
+        div.scroll-down-box
+          img(src="images/scroll-down.svg" class="scroll-down-tag")
+          img(src="images/anchor.svg" class="anchor-pointer")
 
-block content
-  div.bigImage(style="background-image: url('http://placehold.it/1000x600')")
-    div.left.photography
-    div.right.design
 
-  div.about
+    div.about
 
-  div.code
+    //- div.code
 
+    footer
+      div.wrapper
+        ul.ul-base-style
+          li.footer-link Footer Link One
+          li.footer-link Footer Link Two
+
+  script(src='/bower_components/jquery/jquery.min.js')
+  script(src='/javascript/main.js')
 
