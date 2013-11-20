@@ -1,0 +1,14 @@
+{
+  "name": "Trusty Code",
+  "version": "0.0.1",
+  "description": "Personal Website of David Ryan Hall",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "jquery": "~2.0.3",
+    "normalize-css": "~2.1.3"
+  }
+}
