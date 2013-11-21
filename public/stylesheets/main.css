@@ -77,20 +77,33 @@ header .scroll-down-box .anchor-pointer {
   -webkit-animation-fill-mode: backwards;
   -webkit-animation-iteration-count: infinite;
 }
-/* DUMMY PAGES */
+/* BASE PAGES */
+.headline {
+  width: 750px;
+  margin: 40px 110px 20px 110px;
+}
+.design-headline {
+  width: 800px;
+  margin: 35px 90px 20px 90px;
+}
+.social-media-badge {
+  display: block;
+  margin: 40px auto;
+  height: 175px;
+  width: 175px;
+}
 .vertical-div-holder {
-  padding: 3%;
-  height: 100%;
+  height: 550px;
   width: 2px;
 }
 .vertical-div-holder .vertical-div {
-  height: 90%;
+  height: 100%;
   width: 1px;
   border-left: 2px solid #999;
 }
 .about {
   width: 100%;
-  height: 600px;
+  height: 700px;
   background-color: #90ada5;
 }
 .about .about-art {
@@ -99,13 +112,13 @@ header .scroll-down-box .anchor-pointer {
   width: 400px;
   background-image: url("http://placehold.it/400x500");
   background-position: center center;
-  margin: 50px 20px 50px 40px;
+  margin: 10px 20px 30px 40px;
 }
 .about .about-content {
   float: right;
   height: 500px;
   width: 400px;
-  margin: 50px 40px 50px 20px;
+  margin: 10px 40px 30px 20px;
 }
 .about .about-content h1 {
   margin: 0 0 10px 0;
@@ -127,14 +140,14 @@ header .scroll-down-box .anchor-pointer {
 }
 .code {
   width: 100%;
-  height: 600px;
+  height: 700px;
   background-color: #fff;
 }
 .code .code-links {
   float: right;
   height: 500px;
-  width: 300px;
-  margin: 50px 20px 50px 40px;
+  width: 180px;
+  margin: 40px 20px;
 }
 .code .code-links h1 {
   margin: 0 0 10px 0;
@@ -142,17 +155,11 @@ header .scroll-down-box .anchor-pointer {
   color: #222;
   letter-spacing: 1px;
 }
-.code .code-links .social-media-badge {
-  display: block;
-  margin: 25px auto;
-  height: 125px;
-  width: 125px;
-}
 .code .code-content {
   float: left;
   height: 500px;
-  width: 500px;
-  margin: 50px 40px 50px 20px;
+  width: 660px;
+  margin: 10px 40px 50px 20px;
 }
 .code .code-content img {
   margin: 10px 0 10px 0;
@@ -164,20 +171,63 @@ header .scroll-down-box .anchor-pointer {
   line-height: 20px;
   color: #333;
 }
+.design {
+  width: 100%;
+  height: 700px;
+  background-color: #90ada5;
+}
+.design .design-links {
+  float: left;
+  height: 500px;
+  width: 180px;
+  margin: 40px 20px;
+}
+.design .design-links h1 {
+  margin: 0 0 10px 0;
+  text-align: center;
+  color: #222;
+  letter-spacing: 1px;
+}
+.design .design-content {
+  float: right;
+  height: 500px;
+  width: 660px;
+  margin: 10px 40px 50px 20px;
+}
+.design .design-content img {
+  margin: 10px 0 10px 0;
+}
+.photography {
+  width: 100%;
+  height: 700px;
+  background-color: #fff;
+}
+.photography .photo-content {
+  float: left;
+  height: 500px;
+  width: 660px;
+  margin: 10px 40px 50px 20px;
+}
+.photography .photo-links {
+  float: left;
+  height: 500px;
+  width: 180px;
+  margin: 40px 20px;
+}
+.photography .photo-links h1 {
+  margin: 0 0 10px 0;
+  text-align: center;
+  color: #222;
+  letter-spacing: 1px;
+}
 /* FOOTER STYLES */
 footer {
   background-color: #90ada5;
   height: 300px;
-  padding-top: 30px;
   width: 100%;
 }
-footer h1 {
-  text-align: center;
-  color: #fff7e5;
-  font-weight: 600;
-  font-size: 45px;
-  margin: 0;
-  padding: 5px 0;
+footer .headline {
+  margin: 20px 110px 10px 110px;
 }
 footer h2 {
   text-align: center;
@@ -187,8 +237,9 @@ footer h2 {
   padding: 0;
 }
 footer ul {
-  width: 480px;
+  width: 600px;
   margin: 20px auto;
+  padding: 0;
 }
 footer ul li.footer-badge {
   display: inline-block;
@@ -199,10 +250,6 @@ footer ul li.footer-badge {
 footer ul li.footer-badge img {
   height: 110px;
   width: 110px;
-}
-footer ul li.footer-badge img:hover {
-  height: 120px;
-  width: 120px;
 }
 @-moz-keyframes bounce {
   0% {
