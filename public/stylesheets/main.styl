@@ -14,9 +14,30 @@ body
   margin 0 auto
   height 100%
 
-.ul-base-style
-  padding 0
-  margin 0 auto
+nav
+  z-index 10
+  position fixed
+  top 0
+  width 100%
+  height 60px
+  background-color #555
+  margin-top -60px
+
+  ul
+    width 600px
+    margin 0 auto
+    padding 22px
+
+    li.nav-link
+      display inline-block
+      list-style none
+      font-size 16px
+      padding 0 15px 0 15px
+      color #ffffff
+
+    li.nav-link:hover
+      color #bbb
+      cursor pointer
 
 /* HEADER STYLES */
 header
@@ -67,49 +88,130 @@ header
       bottom 10px
       animation-timing-function ease-out
   
-  nav
-    float right
-    width 440px
-    height 30px
-    padding 30px 15px 0 0
-
-    li.nav-link
-      display inline-block
-      list-style none
-      font-size 20px
-      padding-left 25px
-      color #ffffff
-
-    li.nav-link:hover
-      color #bbb
-      cursor pointer
-
-
 /* DUMMY PAGES */
 
-.about, .code
+.vertical-div-holder
+  padding 3%
+  height 100%
+  width 2px
+     
+  .vertical-div
+    height 90%
+    width 1px
+    border-left 2px solid #999
+  
+.about
   width 100%
-  height 500px
+  height 600px
   background-color #90ada5
+  
+  .about-art
+    float left
+    height 500px
+    width 400px
+    background-image url('http://placehold.it/400x500')
+    background-position center center
+    margin 50px 20px 50px 40px
+
+  .about-content
+    float right
+    height 500px
+    width 400px
+    margin 50px 40px 50px 20px
+
+    h1
+      margin 0 0 10px 0
+      text-align center
+      color #fff7e5
+      letter-spacing 2px
+
+    p
+      font-size 16px
+      padding 5px
+      margin 0
+      line-height 20px
+      color #fff7e5
+
+    .profile-pic
+        height 199px
+        width 220px
+        margin-left 80px
+
+.code
+  width 100%
+  height 600px
+  background-color #fff
+
+  .code-links
+    float right
+    height 500px
+    width 300px
+    margin 50px 20px 50px 40px
+
+    h1
+      margin 0 0 10px 0
+      text-align center
+      color #222
+      letter-spacing 1px
+
+    .social-media-badge
+      display block
+      margin 25px auto
+      height 125px
+      width 125px
+
+  .code-content
+    float left
+    height 500px
+    width 500px
+    margin 50px 40px 50px 20px
+    
+    img
+      margin 10px 0 10px 0
+    p
+      font-size 16px
+      padding 10px 0 10px 0
+      margin 0
+      line-height 20px
+      color #333
 
 
 /* FOOTER STYLES */
 footer
-  height 100px
-  width 90%
-  border-top 1px solid #999
-  margin 10px auto 0 auto
+  background-color #90ada5
+  height 300px
+  padding-top 30px
+  width 100%
+
+
+  h1
+    text-align center
+    color #fff7e5
+    font-weight 600
+    font-size 45px
+    margin 0
+    padding 5px 0
+  h2
+    text-align center
+    color #fff7e5
+    font-size 20px
+    margin 0
+    padding 0
 
   ul
-    width 300px
+    width 480px
+    margin 20px auto
     
-    li.footer-link
-      color #999
+    li.footer-badge
       display inline-block
       list-style none
       text-align center
-      padding 10px 10px 0 10px
+      padding 10px 20px 0 20px
 
-    li.footer-link:hover
-      color #333
-      cursor pointer
+      img
+        height 110px
+        width 110px
+      
+      img:hover
+        height 120px
+        width 120px

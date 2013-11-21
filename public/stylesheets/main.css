@@ -14,9 +14,30 @@ body {
   margin: 0 auto;
   height: 100%;
 }
-.ul-base-style {
-  padding: 0;
+nav {
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #555;
+  margin-top: -60px;
+}
+nav ul {
+  width: 600px;
   margin: 0 auto;
+  padding: 22px;
+}
+nav ul li.nav-link {
+  display: inline-block;
+  list-style: none;
+  font-size: 16px;
+  padding: 0 15px 0 15px;
+  color: #fff;
+}
+nav ul li.nav-link:hover {
+  color: #bbb;
+  cursor: pointer;
 }
 /* HEADER STYLES */
 header {
@@ -56,50 +77,132 @@ header .scroll-down-box .anchor-pointer {
   -webkit-animation-fill-mode: backwards;
   -webkit-animation-iteration-count: infinite;
 }
-nav {
-  float: right;
-  width: 440px;
-  height: 30px;
-  padding: 30px 15px 0 0;
-}
-nav li.nav-link {
-  display: inline-block;
-  list-style: none;
-  font-size: 20px;
-  padding-left: 25px;
-  color: #fff;
-}
-nav li.nav-link:hover {
-  color: #bbb;
-  cursor: pointer;
-}
 /* DUMMY PAGES */
-.about,
+.vertical-div-holder {
+  padding: 3%;
+  height: 100%;
+  width: 2px;
+}
+.vertical-div-holder .vertical-div {
+  height: 90%;
+  width: 1px;
+  border-left: 2px solid #999;
+}
+.about {
+  width: 100%;
+  height: 600px;
+  background-color: #90ada5;
+}
+.about .about-art {
+  float: left;
+  height: 500px;
+  width: 400px;
+  background-image: url("http://placehold.it/400x500");
+  background-position: center center;
+  margin: 50px 20px 50px 40px;
+}
+.about .about-content {
+  float: right;
+  height: 500px;
+  width: 400px;
+  margin: 50px 40px 50px 20px;
+}
+.about .about-content h1 {
+  margin: 0 0 10px 0;
+  text-align: center;
+  color: #fff7e5;
+  letter-spacing: 2px;
+}
+.about .about-content p {
+  font-size: 16px;
+  padding: 5px;
+  margin: 0;
+  line-height: 20px;
+  color: #fff7e5;
+}
+.about .about-content .profile-pic {
+  height: 199px;
+  width: 220px;
+  margin-left: 80px;
+}
 .code {
   width: 100%;
+  height: 600px;
+  background-color: #fff;
+}
+.code .code-links {
+  float: right;
   height: 500px;
-  background-color: #90ada5;
+  width: 300px;
+  margin: 50px 20px 50px 40px;
+}
+.code .code-links h1 {
+  margin: 0 0 10px 0;
+  text-align: center;
+  color: #222;
+  letter-spacing: 1px;
+}
+.code .code-links .social-media-badge {
+  display: block;
+  margin: 25px auto;
+  height: 125px;
+  width: 125px;
+}
+.code .code-content {
+  float: left;
+  height: 500px;
+  width: 500px;
+  margin: 50px 40px 50px 20px;
+}
+.code .code-content img {
+  margin: 10px 0 10px 0;
+}
+.code .code-content p {
+  font-size: 16px;
+  padding: 10px 0 10px 0;
+  margin: 0;
+  line-height: 20px;
+  color: #333;
 }
 /* FOOTER STYLES */
 footer {
-  height: 100px;
-  width: 90%;
-  border-top: 1px solid #999;
-  margin: 10px auto 0 auto;
+  background-color: #90ada5;
+  height: 300px;
+  padding-top: 30px;
+  width: 100%;
+}
+footer h1 {
+  text-align: center;
+  color: #fff7e5;
+  font-weight: 600;
+  font-size: 45px;
+  margin: 0;
+  padding: 5px 0;
+}
+footer h2 {
+  text-align: center;
+  color: #fff7e5;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
 }
 footer ul {
-  width: 300px;
+  width: 480px;
+  margin: 20px auto;
 }
-footer ul li.footer-link {
-  color: #999;
+footer ul li.footer-badge {
   display: inline-block;
   list-style: none;
   text-align: center;
-  padding: 10px 10px 0 10px;
+  padding: 10px 20px 0 20px;
 }
-footer ul li.footer-link:hover {
-  color: #333;
-  cursor: pointer;
+footer ul li.footer-badge img {
+  height: 110px;
+  width: 110px;
+}
+footer ul li.footer-badge img:hover {
+  height: 120px;
+  width: 120px;
 }
 @-moz-keyframes bounce {
   0% {

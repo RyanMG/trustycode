@@ -5,7 +5,17 @@ html
     link(rel='stylesheet', href='/bower_components/normalize-css/normalize.css')
     link(rel='stylesheet', href='/stylesheets/main.css')
   body
-    header
+    nav
+      div.wrapper
+        ul.ul-base-style
+          li.nav-link(data-div="one") Back to Top
+          li.nav-link(data-div="two") About
+          li.nav-link(data-div="three") Code
+          li.nav-link(data-div="four") Design
+          li.nav-link(data-div="five") Photography
+          li.nav-link(data-div="six") Contact
+
+    header#one
       div.wrapper
         img(src="images/hand-coded-logo.svg" class="main-logo")
         div.scroll-down-box
@@ -13,15 +23,72 @@ html
           img(src="images/anchor.svg" class="anchor-pointer")
 
 
-    div.about
-
-    //- div.code
-
-    footer
+    div#two.about
       div.wrapper
+        div.about-art
+
+        div.about-content
+          h1 Hi! I'm Ryan!
+          img.profile-pic(src="images/portfolio_pic.png")
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            | Sed pharetra porttitor sem, quis posuere augue interdum quis.
+            | Maecenas justo purus, pulvinar viverra sollicitudin eu, 
+            | gravida quis eros. Sed venenatis nulla sed tincidunt ullamcorper.
+            | Vestibulum non convallis arcu.
+
+          p 
+            | Vivamus ligula ipsum, aliquam hendrerit ornare quis, ultricies eu libero. Ut
+            | volutpat varius massa, a aliquet velit tristique eget. Cras adipiscing neque
+            | quam, at luctus massa consectetur eu. Praesent ac risus id odio molestie commodo. Donec enim libero,
+            | tincidunt quis sagittis tempor, sagittis ac erat.
+        div.vertical-div-holder(style="margin: 0 auto")
+          div.vertical-div
+
+    div#three.code
+      div.wrapper
+        div.code-content
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            | Sed pharetra porttitor sem, quis posuere augue interdum quis.
+            | Maecenas justo purus, pulvinar viverra sollicitudin eu, 
+            | gravida quis eros. Sed venenatis nulla sed tincidunt ullamcorper.
+            | Vestibulum non convallis arcu.
+        
+          img(src="http://placehold.it/500x280")
+
+          p 
+            | Vivamus ligula ipsum, aliquam hendrerit ornare quis, ultricies eu libero. Ut
+            | volutpat varius massa, a aliquet velit tristique eget. Cras adipiscing neque
+            | quam, at luctus massa consectetur eu.
+
+        div.code-links
+          h1 Connect with me!
+          a(href="https://github.com/RyanMG" target="_blank")
+            img.social-media-badge(src="images/badge_github.svg")
+          a(href="http://www.linkedin.com/in/davidryanhall/" target="_blank")
+            img.social-media-badge(src="images/badge_linkedin.svg")
+          a(href="https://angel.co/david-ryan-hall" target="_blank")
+            img.social-media-badge(src="images/badge_angel.svg")
+
+        div.vertical-div-holder(style="margin: 0 0 0 550px")
+          div.vertical-div
+
+    footer#six
+      div.wrapper
+        h1 GET IN TOUCH!
+        h2 I love to talk about tech, photography, design, music, bicycles, books, and pretty much anything else you would want to discuss. (Including work!)
+
         ul.ul-base-style
-          li.footer-link Footer Link One
-          li.footer-link Footer Link Two
+          li.footer-badge
+            a(href="https://twitter.com/RyanHVND" target="_blank")
+              img.social-media-badge(src="images/badge_twitter.svg")
+          li.footer-badge
+            a(href="http://www.linkedin.com/in/davidryanhall/" target="_blank")
+              img.social-media-badge(src="images/badge_linkedin.svg")
+          li.footer-badge
+            a(href="https://angel.co/david-ryan-hall" target="_blank")
+              img.social-media-badge(src="images/badge_angel.svg")
 
   script(src='/bower_components/jquery/jquery.min.js')
   script(src='/javascript/main.js')
