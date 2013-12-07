@@ -15,7 +15,7 @@ body {
   height: 100%;
 }
 nav {
-  z-index: 10;
+  z-index: 11;
   position: fixed;
   top: 0;
   width: 100%;
@@ -40,12 +40,20 @@ nav ul li.nav-link:hover {
   cursor: pointer;
 }
 /* HEADER STYLES */
-header {
-  height: 100%;
-  min-height: 200px;
+.header-background-image {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
   background-image: url("../images/fpo-background-image.jpg");
   background-position: center center;
   background-size: cover;
+}
+header {
+  position: relative;
+  z-index: 10;
+  height: 100%;
+  min-height: 200px;
 }
 header .main-logo {
   width: 700px;
@@ -102,6 +110,8 @@ header .scroll-down-box .anchor-pointer {
   border-left: 2px solid #999;
 }
 .about {
+  position: relative;
+  z-index: 10;
   width: 100%;
   height: 700px;
   background-color: #90ada5;
@@ -139,9 +149,10 @@ header .scroll-down-box .anchor-pointer {
   margin-left: 80px;
 }
 .code {
+  position: relative;
+  z-index: 10;
   width: 100%;
   height: 700px;
-  background-color: #fff;
 }
 .code .code-links {
   float: right;
@@ -152,7 +163,7 @@ header .scroll-down-box .anchor-pointer {
 .code .code-links h1 {
   margin: 0 0 10px 0;
   text-align: center;
-  color: #222;
+  color: #fff;
   letter-spacing: 1px;
 }
 .code .code-content {
@@ -169,9 +180,11 @@ header .scroll-down-box .anchor-pointer {
   padding: 10px 0 10px 0;
   margin: 0;
   line-height: 20px;
-  color: #333;
+  color: #eee;
 }
 .design {
+  position: relative;
+  z-index: 10;
   width: 100%;
   height: 700px;
   background-color: #90ada5;
@@ -198,9 +211,10 @@ header .scroll-down-box .anchor-pointer {
   margin: 10px 0 10px 0;
 }
 .photography {
+  position: relative;
+  z-index: 10;
   width: 100%;
   height: 700px;
-  background-color: #fff;
 }
 .photography .photo-content {
   float: left;
@@ -222,8 +236,9 @@ header .scroll-down-box .anchor-pointer {
 }
 /* FOOTER STYLES */
 footer {
+  position: relative;
+  z-index: 10;
   background-color: #90ada5;
-  height: 300px;
   width: 100%;
 }
 footer .headline {

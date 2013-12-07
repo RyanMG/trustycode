@@ -5,6 +5,7 @@ var cl = function(txt) {
 
 $(document).ready(function() {
   $('header').css({ 'height': $(window).height(), 'width': $(window).width() });
+  $('.header-background-image').css({ 'height': $(window).height(), 'width': $(window).width() });
 });
 
 $(window).resize(function(e) {
