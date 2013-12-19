@@ -13,11 +13,7 @@
   });
 
   $(document).ready(function() {
-    $('header').css({
-      'height': $(window).height(),
-      'width': $(window).width()
-    });
-    return $('.header-background-image').css({
+    return $('header').css({
       'height': $(window).height(),
       'width': $(window).width()
     });

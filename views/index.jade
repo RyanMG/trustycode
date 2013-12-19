@@ -1,124 +1,76 @@
 doctype 5
 html
   head
-    title= title
+    title Trusty Code | Design + Development + DIY
     link(rel='stylesheet', href='/bower_components/normalize-css/normalize.css')
     link(rel='stylesheet', href='/stylesheets/main.css')
+    link(rel='stylesheet', href='/stylesheets/about.css')
   body
     nav
       div.wrapper
+        img.header-logo(src="images/hand-coded-logo-only.svg")
         ul.ul-base-style
-          li.nav-link(data-div="one") Back to Top
-          li.nav-link(data-div="two") About
-          li.nav-link(data-div="three") Code
-          li.nav-link(data-div="four") Design
-          li.nav-link(data-div="five") Photography
-          li.nav-link(data-div="six") Contact
+          li.nav-link(data-div="one") BACK TO TOP
+          li.nav-link(data-div="two") ABOUT
+          li.nav-link(data-div="three") CODE
+          li.nav-link(data-div="four") DESIGN
+          li.nav-link(data-div="five") PHOTOGRAPHY
+          li.nav-link(data-div="six") CONTACT
 
     div.header-background-image
+    header
+      img.main-logo(src="images/hand-coded-logo.svg")
+      div.header-band
+        img.header-band-img(src="images/header-band-img.svg")
 
-    header#one
+    section#about
       div.wrapper
-        img(src="images/hand-coded-logo.svg" class="main-logo")
-        div.scroll-down-box
-          img(src="images/scroll-down.svg" class="scroll-down-tag")
-          img(src="images/anchor.svg" class="anchor-pointer")
+        h1.headline Welcome to Trusty Code
+        h3
+          | Hey there! I am David Ryan Hall - part tech geek, part artist, all
+          | rock and roll. I create things, and this is my showcase for the work
+          | I’ve done! Have a look around, see what catches your fancy!
 
+        div.about-blurbs
+          div.about-code
+            img.about-img(src="images/about-page-img-01.jpg")
+            h2 CODE
+            h4
+              | I make websites, applications and other techy things which are are
+              | generally rad. With a year+ experience, I blend my design experience
+              | with technical skills to make the web more beatiful as well as functional.
 
-    div#two.about
+          div.about-design
+            img.about-img(src="images/about-page-img-02.jpg")
+            h2 DESIGN
+            h4
+              | Solid aesthetics with a mind towards functionality and the conveyance
+              | of the proper message. Good design isn’t just pretty to look at - it
+              | also needs to serve a purpose. I help tell stories through visual mediums.
+
+          div.about-photo
+            img.about-img(src="images/about-page-img-03.jpg")
+            h2 PHOTO
+            h4
+              | A picture is worth 1000 words, but a great picure is an entire narriative.
+              | It’s not about smiling and saying ‘cheese’ - it’s about capturing a
+              | moment that matters. 1/60th of a second is all I need write your story.
+
+    section#code
       div.wrapper
-        img.headline(src="images/title-about.svg") 
-        div.about-art
+        h1.headline Software Engineering
 
-        div.about-content
-          h1 David Ryan Hall
-          img.profile-pic(src="images/portfolio_pic.png")
-          p
-            | Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            | Sed pharetra porttitor sem, quis posuere augue interdum quis.
-            | Maecenas justo purus, pulvinar viverra sollicitudin eu, 
-            | gravida quis eros. Sed venenatis nulla sed tincidunt ullamcorper.
-            | Vestibulum non convallis arcu.
-
-          p 
-            | Vivamus ligula ipsum, aliquam hendrerit ornare quis, ultricies eu libero. Ut
-            | volutpat varius massa, a aliquet velit tristique eget. Cras adipiscing neque
-            | quam, at luctus massa consectetur eu. Praesent ac risus id odio molestie commodo. Donec enim libero,
-            | tincidunt quis sagittis tempor, sagittis ac erat.
-        div.vertical-div-holder(style="margin: 0 auto")
-          div.vertical-div
-
-    div#three.code
+    section#design
       div.wrapper
-        img.headline(src="images/title-software.svg") 
-        div.code-content
-          p
-            | Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            | Sed pharetra porttitor sem, quis posuere augue interdum quis.
-            | Maecenas justo purus, pulvinar viverra sollicitudin eu, 
-            | gravida quis eros. Sed venenatis nulla sed tincidunt ullamcorper.
-            | Vestibulum non convallis arcu.
-        
-          img(src="http://placehold.it/600x330" style="margin-left: 30px")
+        h1.headline Graphic Design
 
-          p 
-            | Vivamus ligula ipsum, aliquam hendrerit ornare quis, ultricies eu libero. Ut
-            | volutpat varius massa, a aliquet velit tristique eget. Cras adipiscing neque
-            | quam, at luctus massa consectetur eu.
-
-        div.code-links
-          h1 Fork it man, let's go coding
-          a(href="https://github.com/RyanMG" target="_blank")
-            img.social-media-badge(src="images/social_media/badge_github.svg")
-
-        div.vertical-div-holder(style="margin: 0 0 0 700px")
-          div.vertical-div
-
-
-    div#four.design
+    section#photography
       div.wrapper
-        img.design-headline(src="images/title-design.svg")
-        div.design-links
-          h1 Quote about design
-          a(href="http://dribbble.com/RyanMG" target="_blank")
-            img.social-media-badge(src="images/social_media/badge_dribble.svg")
-        div.design-content
-          img(src="http://placehold.it/650x400")
-          p
-            | Vivamus ligula ipsum, aliquam hendrerit ornare quis, ultricies eu libero. Ut
-            | volutpat varius massa, a aliquet velit tristique eget. Cras adipiscing neque
-            | quam, at luctus massa consectetur eu.
-        div.vertical-div-holder(style="margin: 0 0 0 220px")
-            div.vertical-div
+        h1.headline Photography
 
-    div#five.photography
+    section#contact
       div.wrapper
-        img.headline(src="images/title-photo.svg") 
-        div.photo-content
-        div.photo-links
-          a(href="http://www.modelmayhem.com/1053225" target="_blank")
-            img.social-media-badge(src="images/social_media/badge_mm.svg")
-        div.vertical-div-holder(style="margin: 0 auto")
-            div.vertical-div
-
-    footer#six
-      div.wrapper
-        img.headline(src="images/title-contact.svg") 
-        h2 I love to talk about tech, photography, design, music, bicycles, books, and pretty much anything else you would want to discuss. (Including work!)
-
-        ul.ul-base-style
-          li.footer-badge
-            a(href="https://twitter.com/RyanHVND" target="_blank")
-              img.social-media-badge(src="images/social_media/badge_twitter.svg")
-          li.footer-badge
-            a(href="http://www.linkedin.com/in/davidryanhall/" target="_blank")
-              img.social-media-badge(src="images/social_media/badge_linkedin.svg")
-          li.footer-badge
-            a(href="https://angel.co/david-ryan-hall" target="_blank")
-              img.social-media-badge(src="images/social_media/badge_angel.svg")
-          li.footer-badge
-            a(href="mailto:david.ryan.hall@gmail.com" target="_blank")
-              img.social-media-badge(src="images/social_media/badge_email.svg")
+        h1.headline Get in Touch
 
   script(src='/bower_components/jquery/jquery.min.js')
   script(src='/javascript/main.js')

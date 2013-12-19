@@ -1,0 +1,7 @@
+#about{background-color:#f9f8f5;height:655px;}
+#about h3{padding:10px 80px 0;text-align:center;color:#232732}
+#about .about-blurbs{width:900px;margin:0 20px;}
+#about .about-blurbs .about-code,#about .about-blurbs .about-design,#about .about-blurbs .about-photo{width:260px;height:400px;padding:20px;float:left;}
+#about .about-blurbs .about-code .about-img,#about .about-blurbs .about-design .about-img,#about .about-blurbs .about-photo .about-img{height:192px;width:192px;margin:0 0 0 34px}
+#about .about-blurbs .about-code h2,#about .about-blurbs .about-design h2,#about .about-blurbs .about-photo h2{color:#232732;text-align:center;font-size:35px;margin:10px 0}
+#about .about-blurbs .about-code h4,#about .about-blurbs .about-design h4,#about .about-blurbs .about-photo h4{color:#232732;text-align:center;font-size:15px;letter-spacing:1px;line-height:17px;margin:0;padding:0 10px}
