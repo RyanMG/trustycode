@@ -1,0 +1,7 @@
+#contact{background-color:#f9f8f5;height:475px;padding-top:10px;}
+#contact h3{text-align:center;font-size:21px;line-height:27px;margin:15px 0;color:#232732}
+#contact .social-media{height:110px;width:800px;margin:30px auto;}
+#contact .social-media img.social-media-badge{float:left;display:inline;height:110px;width:110px;padding:0 10px}
+#contact footer{height:30px;width:100%;border-top:1px solid #8f8f8f;}
+#contact footer p{margin-top:30px;padding-left:20px;font-size:10px;color:#8f8f8f;float:left}
+#contact footer p:last-child{float:right;padding-left:0;padding-right:20px}
