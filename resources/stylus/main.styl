@@ -7,6 +7,14 @@ dkbrown = #764925
 offblack = #232732
 ltgray = #8f8f8f
 
+section-background(edge, center)
+  background: center; /* Old browsers */
+  background: -moz-linear-gradient(left,  center 0%, edge 50%, center 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,edge), color-stop(50%,center), color-stop(100%,edge)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left,  center 0%,edge 50%,center 100%); /* Chrome10+,Safari5.1+ */
+  background: -ms-linear-gradient(left,  center 0%,edge 50%,center 100%); /* IE10+ */
+  background: linear-gradient(to right,  center 0%,edge 50%,center 100%); /* W3C */
+ 
 html
   background-color white
   font-family Arial, Helvetica, sans-serif
@@ -115,24 +123,48 @@ section
   font-size 55px
   color dkbrown
 
-.main-image-left
+.main-image-left, .main-content-left
+  position relative
   float left
+  width 450px
 
-.main-image-right
+.main-image-right, .main-content-right
+  position relative
   float right
+  width 450px
 
-.main-content-right
-  float right
+.center-button
+  text-align center
+  margin-top 20px
+  margin-left -30px
 
-.main-content-left
-  float left
+  button.see-portfolio
+    text-align left
+    border-radius 10px
+    height 40px
+    width 188px
+    padding-left 15px
+    border 1px solid offblack
+    background-color white
+    color offblack
+    font-size 18px
+    font-weight 600
+    letter-spacing 1px
+    background-image url('../images/page-arrow.svg')
+    background-repeat no-repeat
+    background-size 25px 30px
+    background-position 145px center
+
+  button.see-portfolio:hover
+    background-color darken(white, 10)
+
+  button.see-portfolio:focus
+    outline none
 
 #code
-  background-color tan
+  section-background(#eae4e1, #ddd6d2)
 
-#design
-  background-color white
 
 #photography
-  background-color tan
+  section-background(#eae4e1, #ddd6d2)
 

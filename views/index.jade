@@ -6,6 +6,7 @@ html
     link(rel='stylesheet', href='/stylesheets/main.css')
     link(rel='stylesheet', href='/stylesheets/about.css')
     link(rel='stylesheet', href='/stylesheets/contact.css')
+    link(rel='stylesheet', href='/stylesheets/design.css')
     link(rel='stylesheet', href='/stylesheets/code.css')
 
   body
@@ -32,18 +33,14 @@ html
     section#code
       include sections/code
 
-    section#design
-      div.wrapper
-        h1.headline Graphic Design
-        img.main-image-right(src="images/design-tattoo.jpg")
+    //- section#design
+    //-   include sections/design
 
-    section#photography
-      div.wrapper
-        img.main-image-left(src="images/rose-tattoo.jpg")
-        h1.headline Photography
+    //- section#photography
+    //-   include sections/photo.jade
 
-    section#contact
-      include sections/contact
+    //- section#contact
+    //-   include sections/contact
 
   script(src='/bower_components/jquery/jquery.min.js')
   script(src='/javascript/main.js')

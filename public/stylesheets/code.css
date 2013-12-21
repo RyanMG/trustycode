@@ -1,1 +1,9 @@
-#code{background-color:tan}
+#code{padding:0;}
+#code .main-image-left{margin-top:55px;margin-left:10px;height:491px;width:416px}
+#code .main-content-right{width:530px;}
+#code .main-content-right h1{text-align:left;margin-left:-70px}
+#code .main-content-right .code-box{margin-top:20px;padding:20px;width:449px;height:333px;background-color:#f9f8f5;border:2px solid #232732;box-shadow:inset 0 0 45px #999;}
+#code .main-content-right .code-box h2{text-align:center;color:#232732;font-size:30px;margin:4px 0 1px 0;padding:0}
+#code .main-content-right .code-box h2:first-child{font-size:35px;margin-top:0}
+#code .main-content-right .code-box p{text-align:center;margin:8px 0;font-size:18px;font-weight:400;color:#232732;line-height:24px}
+#code .main-content-right .code-box img{margin-top:10px;height:80px;width:80px;margin-left:95px;cursor:pointer}

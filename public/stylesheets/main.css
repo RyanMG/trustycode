@@ -14,10 +14,11 @@ section{display:block;width:100%;height:570px}
 .headline{color:#232732;font-size:47px;margin:0;padding-top:20px;letter-spacing:1px;text-align:center}
 .headline:before{content:'{';padding-right:8px;font-size:55px;color:#764925}
 .headline:after{content:'}';padding-left:6px;font-size:55px;color:#764925}
-.main-image-left{float:left}
-.main-image-right{float:right}
-.main-content-right{float:right}
-.main-content-left{float:left}
-#code{background-color:#e0d9d5}
-#design{background-color:#f9f8f5}
-#photography{background-color:#e0d9d5}
+.main-image-left,.main-content-left{position:relative;float:left;width:450px}
+.main-image-right,.main-content-right{position:relative;float:right;width:450px}
+.center-button{text-align:center;margin-top:20px;margin-left:-30px;}
+.center-button button.see-portfolio{text-align:left;border-radius:10px;height:40px;width:188px;padding-left:15px;border:1px solid #232732;background-color:#f9f8f5;color:#232732;font-size:18px;font-weight:600;letter-spacing:1px;background-image:url("../images/page-arrow.svg");background-repeat:no-repeat;background-size:25px 30px;background-position:145px center}
+.center-button button.see-portfolio:hover{background-color:#e6e2d5}
+.center-button button.see-portfolio:focus{outline:none}
+#code{background:#ddd6d2;background:-moz-linear-gradient(left,#ddd6d2 0%,#eae4e1 50%,#ddd6d2 100%);background:-webkit-gradient(linear,left top,right top,color-stop(0%,#eae4e1),color-stop(50%,#ddd6d2),color-stop(100%,#eae4e1));background:-webkit-linear-gradient(left,#ddd6d2 0%,#eae4e1 50%,#ddd6d2 100%);background:-ms-linear-gradient(left,#ddd6d2 0%,#eae4e1 50%,#ddd6d2 100%);background:linear-gradient(to right,#ddd6d2 0%,#eae4e1 50%,#ddd6d2 100%);}
+#photography{background:#ddd6d2;background:-moz-linear-gradient(left,#ddd6d2 0%,#eae4e1 50%,#ddd6d2 100%);background:-webkit-gradient(linear,left top,right top,color-stop(0%,#eae4e1),color-stop(50%,#ddd6d2),color-stop(100%,#eae4e1));background:-webkit-linear-gradient(left,#ddd6d2 0%,#eae4e1 50%,#ddd6d2 100%);background:-ms-linear-gradient(left,#ddd6d2 0%,#eae4e1 50%,#ddd6d2 100%);background:linear-gradient(to right,#ddd6d2 0%,#eae4e1 50%,#ddd6d2 100%);}
