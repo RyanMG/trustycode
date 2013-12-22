@@ -1,4 +1,5 @@
 #contact{background-color:#f9f8f5;height:475px;padding-top:10px;}
+#contact .main-image-right,#contact .main-image-left{width:225px;height:221px}
 #contact h3{text-align:center;font-size:21px;line-height:27px;margin:15px 0;color:#232732}
 #contact .social-media{height:110px;width:800px;margin:30px auto;}
 #contact .social-media img.social-media-badge{float:left;display:inline;height:110px;width:110px;padding:0 10px}
