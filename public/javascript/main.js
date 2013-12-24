@@ -17,48 +17,13 @@
     }
   });
 
-  define(['jquery'], function($) {
-    var TC, nav;
-    TC = {};
-    ({
-      cl: function(txt) {
-        return console.log(txt);
-      }
+  require(['models/TrustyApp', 'views/TrustyAppView'], function(TrustyApp, TrustyAppView) {
+    var trustyApp, trustyAppView;
+    trustyApp = new TrustyApp();
+    trustyAppView = new TrustyAppView({
+      model: trustyApp
     });
-    $(document).ready(function() {
-      return $('header').css({
-        'height': $(window).height(),
-        'width': $(window).width()
-      });
-    });
-    $(window).resize(function(e) {
-      return $('header').css({
-        'height': $(window).height(),
-        'width': $(window).width()
-      });
-    });
-    $('.nav-link').on('click', function(event) {
-      var link;
-      link = '#' + event.target.dataset.div;
-      return $('html, body').stop().animate({
-        scrollTop: $(link).offset().top - 60
-      }, 1000);
-    });
-    nav = $('nav');
-    return $(window).scroll(function() {
-      if ($(window).scrollTop() > ($(window).height() / 2) && !TC.scrolled) {
-        nav.animate({
-          'margin-top': '0px'
-        });
-        TC.scrolled = true;
-      }
-      if ($(window).scrollTop() <= ($(window).height() / 2) && TC.scrolled) {
-        nav.animate({
-          'margin-top': '-60px'
-        });
-        return TC.scrolled = false;
-      }
-    });
+    return trustyAppView.render();
   });
 
 }).call(this);
