@@ -21,6 +21,15 @@ module.exports = function(grunt) {
         ext: '.css'
       }
     },
+    jade: {
+      compile: {
+        expand: true,
+        cwd: 'views/templates',
+        src: ['**/*.jade'],
+        dest: 'public/templates',
+        ext: '.html'
+      }
+    },
     watch: {
       compileCoffee: {
         files: [ 'resources/coffeescript/**/*.coffee' ],
@@ -35,14 +44,23 @@ module.exports = function(grunt) {
         options: {
           livereload: true
         }
+      },
+      compileJade: {
+        files: [ 'views/templates/**/*.jade' ],
+        tasks: [ 'compileJade' ],
+        options: {
+          livereload: true
+        }
       }
     }
   });
 
+  grunt.loadNpmTasks('grunt-contrib-jade');
   grunt.loadNpmTasks('grunt-contrib-coffee');
   grunt.loadNpmTasks('grunt-contrib-stylus');
   grunt.loadNpmTasks('grunt-contrib-watch');
 
+  grunt.registerTask('compileJade', ['jade']);
   grunt.registerTask('compileStylus', ['stylus']);
   grunt.registerTask('compileCoffee', ['coffee']);
   grunt.registerTask('default', ['watch']);

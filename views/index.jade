@@ -11,37 +11,6 @@ html
     link(rel='stylesheet', href='/stylesheets/photo.css')
       
   body
-    nav
-      div.wrapper
-        img.header-logo(src="images/hand-coded-logo-only.svg")
-        ul.ul-base-style
-          li.nav-link(data-div="top") BACK TO TOP
-          li.nav-link(data-div="about") ABOUT
-          li.nav-link(data-div="code") CODE
-          li.nav-link(data-div="design") DESIGN
-          li.nav-link(data-div="photography") PHOTOGRAPHY
-          li.nav-link(data-div="contact") CONTACT
-
-    div.header-background-image
-    header#top
-      img.main-logo(src="images/hand-coded-logo.svg")
-      div.header-band
-        img.header-band-img(src="images/header-band-img.svg")
-
-    section#about
-      include sections/about
-
-    section#code
-      include sections/code
-
-    section#design
-      include sections/design
-
-    section#photography
-      include sections/photo.jade
-
-    section#contact
-      include sections/contact
 
   script(data-main="javascript/main", src="bower_components/requirejs/require.js")
 
