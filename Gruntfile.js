@@ -12,8 +12,7 @@ module.exports = function(grunt) {
         ext: '.js'
       }
     },
-
-     stylus: {
+    stylus: {
       compile: {
         expand: true,
         cwd: 'resources/stylus',
@@ -22,7 +21,6 @@ module.exports = function(grunt) {
         ext: '.css'
       }
     },
- 
     watch: {
       compileCoffee: {
         files: [ 'resources/coffeescript/**/*.coffee' ],

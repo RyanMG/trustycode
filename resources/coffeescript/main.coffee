@@ -1,29 +1,42 @@
-TC = {}
-TC.scrolled = false
+requirejs.config({
+  baseUrl: 'javascript',
+  paths: {
+    'jquery': 'bower_components/jquery/jquery.min'
+  },
+  shim: {
+    'underscore': {
+      exports: '_'
+    },
+    'backbone': {
+      deps: ['underscore', 'jquery'],
+      exports: 'Backbone'
+    }
+  }
+});
 
-cl: (txt) ->
-  console.log txt
+# cl: (txt) ->
+#   console.log txt
 
-$(document).ready ->
-  $('header').css({ 'height': $(window).height(), 'width': $(window).width() })
+# $(document).ready ->
+#   $('header').css({ 'height': $(window).height(), 'width': $(window).width() })
 
-$(window).resize (e) ->
-  $('header').css({ 'height': $(window).height(), 'width': $(window).width() })
+# $(window).resize (e) ->
+#   $('header').css({ 'height': $(window).height(), 'width': $(window).width() })
 
-$('.nav-link').on 'click', (event) =>
-  link = $('#' + $(this).data('div'))
-  $('html, body').stop().animate {
-    scrollTop: $(link).offset().top - 60
-  }, 1000
+# $('.nav-link').on 'click', (event) =>
+#   link = $('#' + $(this).data('div'))
+#   $('html, body').stop().animate {
+#     scrollTop: $(link).offset().top - 60
+#   }, 1000
 
-nav = $('nav')
+# nav = $('nav')
 
-$(window).scroll =>
+# $(window).scroll =>
     
-  if $(window).scrollTop() > ($(window).height() / 2)  && !TC.scrolled
-    nav.animate({ 'margin-top': '0px' })
-    TC.scrolled = true
+#   if $(window).scrollTop() > ($(window).height() / 2)  && !TC.scrolled
+#     nav.animate({ 'margin-top': '0px' })
+#     TC.scrolled = true
 
-  if $(window).scrollTop() <= ($(window).height() / 2) && TC.scrolled
-    nav.animate { 'margin-top': '-60px' }
-    TC.scrolled = false
+#   if $(window).scrollTop() <= ($(window).height() / 2) && TC.scrolled
+#     nav.animate { 'margin-top': '-60px' }
+#     TC.scrolled = false
