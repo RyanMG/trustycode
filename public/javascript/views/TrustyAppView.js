@@ -3,8 +3,9 @@
     __hasProp = {}.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
-  define(['jquery', 'underscore', 'backbone', 'text!templates/TrustyApp.html'], function($, _, Backbone, TrustyAppTemplate) {
-    var TrustyAppView, _ref;
+  define(['jquery', 'underscore', 'backbone', 'text!templates/TrustyApp.html', 'views/HeaderView', 'views/AboutView', 'views/CodeView', 'views/DesignView', 'views/PhotoView', 'views/ContactView'], function($, _, Backbone, trustyAppTemplate, headerView, aboutView, codeView, designView, photoView, contactView) {
+    var TrustyAppView, views, _ref;
+    views = Array.prototype.slice.call(arguments, 4);
     TrustyAppView = (function(_super) {
       __extends(TrustyAppView, _super);
 
@@ -16,8 +17,12 @@
       TrustyAppView.prototype.el = $('body');
 
       TrustyAppView.prototype.render = function() {
-        this.template = _.template(TrustyAppTemplate);
-        return this.$el.append(this.template);
+        var _this = this;
+        this.template = _.template(trustyAppTemplate);
+        this.$el.append(this.template);
+        return _(views).each(function(view) {
+          return _this.$el.append(view.render().el);
+        });
       };
 
       return TrustyAppView;

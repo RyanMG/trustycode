@@ -5,7 +5,7 @@
 
   define(['jquery', 'underscore', 'backbone'], function($, _, Backbone) {
     var TrustyApp, _ref;
-    return TrustyApp = (function(_super) {
+    TrustyApp = (function(_super) {
       __extends(TrustyApp, _super);
 
       function TrustyApp() {
@@ -20,6 +20,7 @@
       return TrustyApp;
 
     })(Backbone.Model);
+    return TrustyApp;
   });
 
 }).call(this);
