@@ -5,7 +5,7 @@ module.exports = {
   },
 
   index: function(app, res) {
-    res.render('index', {title: 'Trusty Code'});
+    res.render('index');
   }
 
 };
