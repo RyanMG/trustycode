@@ -13,7 +13,7 @@
         return _ref;
       }
 
-      PhotoView.prototype.el = $('#photo');
+      PhotoView.prototype.el = $('#photography');
 
       PhotoView.prototype.render = function() {
         this.template = _.template(photo);

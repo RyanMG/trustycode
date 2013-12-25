@@ -12,7 +12,7 @@
         return _ref;
       }
 
-      HeaderView.prototype.el = $('#top');
+      HeaderView.el = $('#top');
 
       HeaderView.prototype.render = function() {
         this.template = _.template(header);
