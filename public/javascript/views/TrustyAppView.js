@@ -11,6 +11,7 @@
       __extends(TrustyAppView, _super);
 
       function TrustyAppView() {
+        _this.scrollToSection = __bind(_this.scrollToSection, this);
         _this.resetHeaderSize = __bind(_this.resetHeaderSize, this);
         _this.showNavBar = __bind(_this.showNavBar, this);
         _ref = TrustyAppView.__super__.constructor.apply(this, arguments);
@@ -18,6 +19,10 @@
       }
 
       TrustyAppView.prototype.el = $('body');
+
+      TrustyAppView.prototype.events = {
+        'click .nav-link': 'scrollToSection'
+      };
 
       TrustyAppView.prototype.initialize = function() {
         var _this = this;
@@ -68,6 +73,14 @@
           'height': $(window).height(),
           'width': $(window).width()
         });
+      };
+
+      TrustyAppView.prototype.scrollToSection = function(event) {
+        var link;
+        link = '#' + event.target.dataset.div;
+        return $('html, body').stop().animate({
+          scrollTop: $(link).offset().top - 60
+        }, 1000);
       };
 
       return TrustyAppView;

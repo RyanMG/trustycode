@@ -15,6 +15,9 @@ define(
     class TrustyAppView extends Backbone.View
       el: $('body')
       
+      events:
+        'click .nav-link': 'scrollToSection'
+
       initialize: ->
         @scrolled = false
         @nav = null
@@ -42,6 +45,12 @@ define(
 
       resetHeaderSize: =>
         $('header').css({ 'height': $(window).height(), 'width': $(window).width() })        
+
+      scrollToSection: (event) =>
+        link = '#' + event.target.dataset.div
+        $('html, body').stop().animate({
+          scrollTop: $(link).offset().top - 60
+        }, 1000);
 
     TrustyAppView
 )
