@@ -16,15 +16,15 @@ define(['jquery', 'underscore', 'backbone', 'text!templates/sections/design.html
       $('.designPort').animate({
         'margin-left': -$(window).width()
       },1000)
-        
-      backToMain: ->
-        console.log 'test'
-        $('.designMain').animate({
-          'margin-left': $(window).width()
-        }, 1000)
-        $('.designPort').animate({
-          'margin-left': $(window).width()
-        }, 1000)
+      
+    backToMain: ->
+      console.log 'test'
+      $('.designMain').animate({
+        'margin-left': 0
+      }, 1000)
+      $('.designPort').animate({
+        'margin-left': 0
+      }, 1000)
 
   DesignView
 )

@@ -29,20 +29,19 @@
         $('.designMain').animate({
           'margin-left': -$(window).width()
         }, 1000);
-        $('.designPort').animate({
+        return $('.designPort').animate({
           'margin-left': -$(window).width()
         }, 1000);
-        return {
-          backToMain: function() {
-            console.log('test');
-            $('.designMain').animate({
-              'margin-left': $(window).width()
-            }, 1000);
-            return $('.designPort').animate({
-              'margin-left': $(window).width()
-            }, 1000);
-          }
-        };
+      };
+
+      DesignView.prototype.backToMain = function() {
+        console.log('test');
+        $('.designMain').animate({
+          'margin-left': 0
+        }, 1000);
+        return $('.designPort').animate({
+          'margin-left': 0
+        }, 1000);
       };
 
       return DesignView;

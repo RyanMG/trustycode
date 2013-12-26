@@ -15,9 +15,33 @@
 
       PhotoView.prototype.el = $('#photography');
 
+      PhotoView.prototype.events = {
+        'click #photoPortfolio': 'loadPhotoPortfolio',
+        'click #photoBack': 'backToMain'
+      };
+
       PhotoView.prototype.render = function() {
         this.template = _.template(photo);
         return this.$el.html(this.template);
+      };
+
+      PhotoView.prototype.loadPhotoPortfolio = function() {
+        $('.photoMain').animate({
+          'margin-left': -$(window).width()
+        }, 1000);
+        return $('.photoPort').animate({
+          'margin-left': -$(window).width()
+        }, 1000);
+      };
+
+      PhotoView.prototype.backToMain = function() {
+        console.log('test');
+        $('.photoMain').animate({
+          'margin-left': 0
+        }, 1000);
+        return $('.photoPort').animate({
+          'margin-left': 0
+        }, 1000);
       };
 
       return PhotoView;
