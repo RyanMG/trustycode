@@ -16,7 +16,8 @@
       DesignView.prototype.el = $('#design');
 
       DesignView.prototype.events = {
-        'click #designPortfolio': 'loadDesignPortfolio'
+        'click #designPortfolio': 'loadDesignPortfolio',
+        'click #designBack': 'backToMain'
       };
 
       DesignView.prototype.render = function() {
@@ -25,7 +26,23 @@
       };
 
       DesignView.prototype.loadDesignPortfolio = function() {
-        return this.designPortTemplate = _.template(designPort);
+        $('.designMain').animate({
+          'margin-left': -$(window).width()
+        }, 1000);
+        $('.designPort').animate({
+          'margin-left': -$(window).width()
+        }, 1000);
+        return {
+          backToMain: function() {
+            console.log('test');
+            $('.designMain').animate({
+              'margin-left': $(window).width()
+            }, 1000);
+            return $('.designPort').animate({
+              'margin-left': $(window).width()
+            }, 1000);
+          }
+        };
       };
 
       return DesignView;

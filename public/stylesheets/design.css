@@ -1,8 +1,8 @@
 #design{background-color:#f9f8f5;height:530px;}
-#design .designMain{width:100%;}
+#design .designMain{position:absolute;width:100%;left:0;}
 #design .designMain .main-content-left{z-index:10;}
 #design .designMain .main-content-left h1.headline{float:left;width:500px;margin:10px 0 30px 30px}
 #design .designMain .main-content-left p{clear:left;width:450px;color:#737373;font-size:20px;line-height:27px;padding:0 0 0 40px;margin:10px auto}
 #design .designMain .main-content-left .center-button{margin-top:40px;margin-left:10px}
 #design .designMain .main-image-right{margin:20px 20px 0 0;height:493px;width:386px}
-#design .designPort{width:100%;left:100%}
+#design .designPort{position:absolute;width:100%;left:100%}

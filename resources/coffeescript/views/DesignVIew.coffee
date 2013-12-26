@@ -2,15 +2,29 @@ define(['jquery', 'underscore', 'backbone', 'text!templates/sections/design.html
   class DesignView extends Backbone.View
     el: $('#design')
     events:
-      'click #designPortfolio': 'loadDesignPortfolio'
+      'click #designPortfolio': 'loadDesignPortfolio',
+      'click #designBack': 'backToMain'
 
     render: ->
       @template = _.template design
       @$el.html(@template)
 
     loadDesignPortfolio: ->
-      @designPortTemplate = _.template designPort
-
+      $('.designMain').animate({
+        'margin-left': -$(window).width()
+      }, 1000)
+      $('.designPort').animate({
+        'margin-left': -$(window).width()
+      },1000)
+        
+      backToMain: ->
+        console.log 'test'
+        $('.designMain').animate({
+          'margin-left': $(window).width()
+        }, 1000)
+        $('.designPort').animate({
+          'margin-left': $(window).width()
+        }, 1000)
 
   DesignView
 )
