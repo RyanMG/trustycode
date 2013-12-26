@@ -15,9 +15,33 @@
 
       CodeView.prototype.el = $('#code');
 
+      CodeView.prototype.events = {
+        'click #codePortfolio': 'loadCodePortfolio',
+        'click #codeBack': 'backToMain'
+      };
+
       CodeView.prototype.render = function() {
         this.template = _.template(code);
         return this.$el.html(this.template);
+      };
+
+      CodeView.prototype.loadCodePortfolio = function() {
+        $('.codeMain').animate({
+          'margin-left': -$(window).width()
+        }, 1000);
+        return $('.codePort').animate({
+          'margin-left': -$(window).width()
+        }, 1000);
+      };
+
+      CodeView.prototype.backToMain = function() {
+        console.log('test');
+        $('.codeMain').animate({
+          'margin-left': 0
+        }, 1000);
+        return $('.codePort').animate({
+          'margin-left': 0
+        }, 1000);
       };
 
       return CodeView;

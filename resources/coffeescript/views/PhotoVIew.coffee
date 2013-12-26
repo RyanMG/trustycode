@@ -27,6 +27,5 @@ define(['jquery', 'underscore', 'backbone', 'text!templates/sections/photo.html'
         'margin-left': 0
       }, 1000)
 
-
   PhotoView
 )
