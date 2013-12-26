@@ -28,166 +28,173 @@ html
 body
   margin 0
   padding 0
-  width 100%
   min-height 500px
 
-.wrapper
-  width 960px
-  margin 0 auto
-  height 100%
-
-nav
-  z-index 11
-  position fixed
-  top 0
+.container
+  position absolute
   width 100%
-  height 60px
-  background-color dkbrown
-  margin-top -60px
+  overflow-x hidden
   
-  .header-logo
-    height 50px
-    margin-top 5px
-    margin-left 10px
-    float left
+  .wrapper
+    width 960px
+    margin 0 auto
+    height 100%
 
-  ul
-    text-align right
-    width 580px
-    margin-top 22px
-    margin-right 10px
-    float right
-    overflow hidden
-
-    li.nav-link
-      display inline-block
-      list-style none
-      font-size 12px
-      padding-left 35px
-      color white
-
-    li.nav-link:hover
-      color #bbb
-      cursor pointer
-
-
-header
-  position relative
-  z-index 2
-  min-height 200px
-  
-  .main-logo
-    width 500px
-    position absolute
-    left 50%
-    top 50%
-    margin-left -80px
-    margin-top -150px
-
-  .header-band
+  nav
+    z-index 11
+    position fixed
+    top 0
     width 100%
-    height 90px
-    position absolute
-    top 70%
-    background-color #111
-    opacity .8
+    height 60px
+    background-color dkbrown
+    margin-top -60px
+    
+    .header-logo
+      height 50px
+      margin-top 5px
+      margin-left 10px
+      float left
 
-    .header-band-img
-      height 80px
+    ul
+      text-align right
+      width 580px
+      margin-top 22px
+      margin-right 10px
+      float right
+      overflow hidden
+
+      li.nav-link
+        display inline-block
+        list-style none
+        font-size 12px
+        padding-left 35px
+        color white
+
+      li.nav-link:hover
+        color #bbb
+        cursor pointer
+
+
+  header
+    position relative
+    z-index 2
+    min-height 200px
+    
+    .main-logo
+      width 500px
       position absolute
-      left 48%
-      margin-top 10px
+      left 50%
+      top 50%
+      margin-left -80px
+      margin-top -150px
 
-section
-  display block
-  width 100%
-  height 570px
+    .header-band
+      width 100%
+      height 90px
+      position absolute
+      top 70%
+      background-color #111
+      opacity .8
 
-.headline
-  color offblack
-  font-size 47px
-  margin 0
-  padding-top 20px
-  letter-spacing 1px
-  text-align center
+      .header-band-img
+        height 80px
+        position absolute
+        left 48%
+        margin-top 10px
 
-.headline:before
-  content '{'
-  padding-right 8px
-  font-size 55px
-  color dkbrown
+  section
+    display block
+    width 100%
+    height 570px
+    overflow-x hidden
 
-.headline:after
-  content: '}'
-  padding-left 6px
-  font-size 55px
-  color dkbrown
-
-.main-image-left, .main-content-left
-  position relative
-  float left
-  width 450px
-
-.main-image-right, .main-content-right
-  position relative
-  float right
-  width 450px
-
-.center-button
-  text-align center
-  margin-top 20px
-  margin-left -30px
-
-  button.see-portfolio
-    text-align left
-    border-radius 10px
-    height 40px
-    width 188px
-    padding-left 15px
-    border 1px solid offblack
-    background-color white
+  .headline
     color offblack
-    font-size 18px
-    font-weight 600
+    font-size 47px
+    margin 0
+    padding-top 20px
     letter-spacing 1px
-    background-image url('../images/page-arrow.svg')
-    background-repeat no-repeat
-    background-size 25px 30px
-    background-position 145px center
+    text-align center
 
-  button.see-portfolio:hover
-    background-color darken(white, 10)
+  .headline:before
+    content '{'
+    padding-right 8px
+    font-size 55px
+    color dkbrown
 
-  button.see-portfolio:focus
-    outline none
+  .headline:after
+    content: '}'
+    padding-left 6px
+    font-size 55px
+    color dkbrown
 
-  button.back-button
-    text-align right
-    border-radius 10px
-    height 40px
-    width 100px
-    padding-right 15px
-    border 1px solid offblack
-    background-color white
-    color offblack
-    font-size 18px
-    font-weight 600
-    letter-spacing 1px
-    background-image url('../images/page-arrow.svg')
-    background-repeat no-repeat
-    background-size 25px 30px
-    background-position 15px center
+  .main-image-left, .main-content-left
+    position relative
+    float left
+    width 450px
 
-  button.back-button:hover
-    background-color darken(white, 10)
+  .main-image-right, .main-content-right
+    position relative
+    float right
+    width 450px
 
-  button.back-button:focus
-    outline none
+  .center-button
+    text-align center
+    margin-top 20px
+    margin-left -30px
 
-#code
-  section-background(#eae4e1, #ddd6d2)
+    button.see-portfolio
+      text-align left
+      border-radius 10px
+      height 40px
+      width 188px
+      padding-top 4px
+      padding-left 15px
+      border 1px solid offblack
+      background-color white
+      color offblack
+      font-size 18px
+      font-weight 600
+      letter-spacing 1px
+      background-image url('../images/page-arrow.svg')
+      background-repeat no-repeat
+      background-size 25px 30px
+      background-position 145px center
+
+    button.see-portfolio:hover
+      background-color darken(white, 10)
+
+    button.see-portfolio:focus
+      outline none
+
+    button.back-button
+      text-align right
+      border-radius 10px
+      height 40px
+      width 100px
+      padding-top 4px
+      padding-right 12px
+      border 1px solid offblack
+      background-color white
+      color offblack
+      font-size 18px
+      font-weight 600
+      letter-spacing 1px
+      background-image url('../images/page-arrow-back.svg')
+      background-repeat no-repeat
+      background-size 25px 30px
+      background-position 8px center
+
+    button.back-button:hover
+      background-color darken(white, 10)
+
+    button.back-button:focus
+      outline none
+
+  #code
+    section-background(#eae4e1, #ddd6d2)
 
 
-#photography
-  section-background(#eae4e1, #ddd6d2)
+  #photography
+    section-background(#eae4e1, #ddd6d2)
 

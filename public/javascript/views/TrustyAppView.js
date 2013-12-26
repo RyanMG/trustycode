@@ -18,7 +18,7 @@
         return _ref;
       }
 
-      TrustyAppView.prototype.el = $('body');
+      TrustyAppView.prototype.el = $('.container');
 
       TrustyAppView.prototype.events = {
         'click .nav-link': 'scrollToSection'
@@ -46,6 +46,9 @@
           return _this.$el.append(newView.render().el);
         });
         this.nav = $('nav');
+        $('.container').css({
+          'width': $(window).width()
+        });
         $('header').css({
           'height': $(window).height(),
           'width': $(window).width()
@@ -69,6 +72,9 @@
       };
 
       TrustyAppView.prototype.resetHeaderSize = function() {
+        $('.container').css({
+          'width': $(window).width()
+        });
         return $('header').css({
           'height': $(window).height(),
           'width': $(window).width()

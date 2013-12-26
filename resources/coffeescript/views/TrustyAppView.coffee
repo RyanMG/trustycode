@@ -13,7 +13,7 @@ define(
   ($, _, Backbone, trustyAppTemplate, aboutView, codeView, designView, photoView, contactView) =>
     views = Array.prototype.slice.call(arguments, 4)
     class TrustyAppView extends Backbone.View
-      el: $('body')
+      el: $('.container')
       
       events:
         'click .nav-link': 'scrollToSection'
@@ -31,6 +31,7 @@ define(
           newView = new view()
           @$el.append newView.render().el
         @nav = $('nav')
+        $('.container').css({ 'width': $(window).width() })
         $('header').css({ 'height': $(window).height(), 'width': $(window).width() })
         @
 
@@ -44,6 +45,7 @@ define(
           @scrolled = false
 
       resetHeaderSize: =>
+        $('.container').css({ 'width': $(window).width() })
         $('header').css({ 'height': $(window).height(), 'width': $(window).width() })        
 
       scrollToSection: (event) =>
