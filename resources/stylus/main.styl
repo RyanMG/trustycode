@@ -168,6 +168,7 @@ body
       outline none
 
     button.back-button
+      display inline-block
       text-align right
       border-radius 10px
       height 40px
@@ -189,6 +190,31 @@ body
       background-color darken(white, 10)
 
     button.back-button:focus
+      outline none
+
+    button.next-button
+      display inline-block
+      text-align left
+      border-radius 10px
+      height 40px
+      width 100px
+      padding-top 4px
+      padding-left 12px
+      border 1px solid offblack
+      background-color white
+      color offblack
+      font-size 18px
+      font-weight 600
+      letter-spacing 1px
+      background-image url('../images/page-arrow.svg')
+      background-repeat no-repeat
+      background-size 25px 30px
+      background-position 60px center
+
+    button.next-button:hover
+      background-color darken(white, 10)
+
+    button.next-button:focus
       outline none
 
   #code

@@ -8,7 +8,12 @@
 #code .codeMain .main-content-right .code-box h2:first-child{font-size:35px;margin-top:0}
 #code .codeMain .main-content-right .code-box p{text-align:center;margin:8px 0;font-size:17px;font-weight:400;color:#737373;line-height:24px}
 #code .codeMain .main-content-right .code-box img{margin-top:10px;height:80px;width:80px;margin-left:95px;cursor:pointer}
-#code .codePort{position:absolute;width:100%;left:100%;}
-#code .codePort .center-button{margin-top:5px}
-#code .codePort ul{margin-bottom:0;}
-#code .codePort ul li.code-example-box{list-style:none;margin:10px;display:inline-block;height:215px;width:270px;border:#737373;background-color:#232732}
+#code .codePortOne{position:absolute;width:100%;left:100%;}
+#code .codePortOne .center-button{clear:both;display:inline-block;margin-top:5px}
+#code .codePortOne ul{margin-bottom:0;}
+#code .codePortOne ul li.code-example-box-square{clear:right;list-style:none;margin-bottom:6px;margin-top:6px;margin-right:45px;display:inline-block;height:215px;width:270px;border:2px solid #737373;float:right;background-color:#232732}
+#code .codePortOne ul li.code-example-box-tall{float:left;list-style:none;margin:10px;display:inline-block;height:440px;width:270px;border:2px solid #737373;background-color:#232732}
+#code .codePortTwo{position:absolute;width:100%;left:200%;}
+#code .codePortTwo .center-button{clear:both;display:inline-block;margin-top:5px}
+#code .codePortTwo ul{margin-bottom:0;}
+#code .codePortTwo ul li.code-example-box-tall{float:left;list-style:none;margin:10px;display:inline-block;height:440px;width:270px;border:2px solid #737373;background-color:#232732}

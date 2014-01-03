@@ -17,7 +17,9 @@
 
       CodeView.prototype.events = {
         'click #codePortfolio': 'loadCodePortfolio',
-        'click #codeBack': 'backToMain'
+        'click #codeBackOne': 'backToMain',
+        'click #codeBackTwo': 'backToOne',
+        'click #codeNext': 'loadCodeTwo'
       };
 
       CodeView.prototype.render = function() {
@@ -29,18 +31,47 @@
         $('.codeMain').animate({
           'margin-left': -$(window).width()
         }, 1000);
-        return $('.codePort').animate({
+        $('.codePortOne').animate({
+          'margin-left': -$(window).width()
+        }, 1000);
+        return $('.codePorttwo').animate({
           'margin-left': -$(window).width()
         }, 1000);
       };
 
       CodeView.prototype.backToMain = function() {
-        console.log('test');
         $('.codeMain').animate({
           'margin-left': 0
         }, 1000);
-        return $('.codePort').animate({
+        $('.codePortOne').animate({
           'margin-left': 0
+        }, 1000);
+        return $('.codePortTwo').animate({
+          'margin-left': 0
+        }, 1000);
+      };
+
+      CodeView.prototype.backToOne = function() {
+        $('.codeMain').animate({
+          'margin-left': -$(window).width()
+        }, 1000);
+        $('.codePortOne').animate({
+          'margin-left': -$(window).width()
+        }, 1000);
+        return $('.codePortTwo').animate({
+          'margin-left': -$(window).width()
+        }, 1000);
+      };
+
+      CodeView.prototype.loadCodeTwo = function() {
+        $('.codeMain').animate({
+          'margin-left': -($(window).width() * 2)
+        }, 1000);
+        $('.codePortOne').animate({
+          'margin-left': -($(window).width() * 2)
+        }, 1000);
+        return $('.codePortTwo').animate({
+          'margin-left': -($(window).width() * 2)
         }, 1000);
       };
 

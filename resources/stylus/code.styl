@@ -64,24 +64,62 @@ gray = #737373
           width 80px
           margin-left 95px
           cursor pointer
-  .codePort
+
+  .codePortOne
     position absolute
     width 100%
     left 100%
 
-
     .center-button
+      clear both
+      display inline-block
       margin-top 5px
     
     ul
       margin-bottom 0
 
-      li.code-example-box
+      li.code-example-box-square
+        clear right
         list-style none
-        margin 10px
+        margin-bottom 6px
+        margin-top 6px
+        margin-right 45px
         display inline-block
         height 215px
         width 270px
-        border gray
+        border 2px solid gray
+        float right
         background-color offblack
-        
+
+      li.code-example-box-tall
+        float left
+        list-style none
+        margin 10px
+        display inline-block
+        height 440px
+        width 270px
+        border 2px solid gray
+        background-color offblack
+
+  .codePortTwo
+    position absolute
+    width 100%
+    left 200%
+
+    .center-button
+      clear both
+      display inline-block
+      margin-top 5px
+    
+    ul
+      margin-bottom 0
+
+      li.code-example-box-tall
+        float left
+        list-style none
+        margin 10px
+        display inline-block
+        height 440px
+        width 270px
+        border 2px solid gray
+        background-color offblack
