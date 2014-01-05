@@ -20,7 +20,7 @@ define(['jquery', 'underscore', 'backbone', 'text!templates/sections/code.html']
       $('.codePortOne').animate({
         'margin-left': -$(window).width()
       },1000)
-      $('.codePorttwo').animate({
+      $('.codePortTwo').animate({
         'margin-left': -$(window).width()
       },1000)
 

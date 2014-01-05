@@ -34,7 +34,7 @@
         $('.codePortOne').animate({
           'margin-left': -$(window).width()
         }, 1000);
-        return $('.codePorttwo').animate({
+        return $('.codePortTwo').animate({
           'margin-left': -$(window).width()
         }, 1000);
       };
