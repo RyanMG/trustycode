@@ -9,7 +9,8 @@ html
     link(rel='stylesheet', href='/stylesheets/design.css')
     link(rel='stylesheet', href='/stylesheets/code.css')
     link(rel='stylesheet', href='/stylesheets/photo.css')
-      
+    link(rel='stylesheet', href='/stylesheets/modal.css')
+
   body
     div.container
       section#about
@@ -17,5 +18,7 @@ html
       section#design
       section#photography
       section#contact
+
+    div.modal-mask(style="display:none")
 
     script(data-main="javascript/main", src="bower_components/requirejs/require.js")

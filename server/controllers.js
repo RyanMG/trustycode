@@ -5,6 +5,16 @@ var headers = {
   'access-control-max-age': 10 // Seconds.
 };
 
+var config = require('../config/config'),
+    db = config['development'],
+    Sequelize = require('sequelize'),
+    sequelize = new Sequelize(db.database, db.username, db.password, {
+      dialect: 'mysql',
+      port: db.port
+    });
+
+sequelize.sync();
+
 module.exports = {
   
   route: function(app) {
@@ -17,8 +27,9 @@ module.exports = {
   },
 
   serveProject: function(app, res) {
-    var project = app.query.project;
-    this.sendResponse(res, 'WAMMO');
+    var project = config.projectList[app.query.project];
+    console.log(project);
+    this.sendResponse(res, project);
   },
 
   sendResponse: function(res, value, statusCode, contentType) {
