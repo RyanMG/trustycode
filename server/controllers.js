@@ -27,18 +27,20 @@ module.exports = {
   },
 
   serveProject: function(app, res) {
+    console.log(config.projectList);
+    console.log(app.query.project); 
     var project = config.projectList[app.query.project];
     console.log(project);
     this.sendResponse(res, project);
   },
 
   sendResponse: function(res, value, statusCode, contentType) {
-    statusCode = statusCode || 201;
+    statusCode = statusCode || 200;
     contentType = contentType || 'application/json';
     value = (typeof value === 'string') ? value : JSON.stringify(value);
     headers['content-type'] = contentType;
     res.writeHead(statusCode, headers);
-    res.end(object);
+    res.end(value);
   }
 
 };
