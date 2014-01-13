@@ -77,10 +77,14 @@
       };
 
       CodeView.prototype.loadModal = function() {
-        var modalData;
-        return modalData = new ModalData({
+        var modalData, modelView;
+        modalData = new ModalData({
           target: event.target.dataset.proj
         });
+        modelView = new ModelView({
+          model: modelData
+        });
+        return modelView.render();
       };
 
       return CodeView;

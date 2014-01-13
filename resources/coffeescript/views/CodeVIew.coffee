@@ -60,7 +60,8 @@ define(['jquery', 'underscore', 'backbone', 'text!templates/sections/code.html',
 
     loadModal: ->
       modalData = new ModalData { target: event.target.dataset.proj }
-
+      modelView = new ModelView { model: modelData }
+      modelView.render()
 
   CodeView
 )

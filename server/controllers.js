@@ -27,8 +27,7 @@ module.exports = {
   },
 
   serveProject: function(app, res) {
-    console.log(config.projectList);
-    console.log(app.query.project); 
+    console.log(app.query.project);
     var project = config.projectList[app.query.project];
     console.log(project);
     this.sendResponse(res, project);

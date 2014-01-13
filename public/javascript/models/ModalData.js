@@ -24,7 +24,7 @@
           url: url,
           method: 'GET',
           success: function(data) {
-            return console.log(data);
+            return this.set('attributes', data);
           },
           error: function(err) {
             return console.log(err);

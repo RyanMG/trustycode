@@ -10,7 +10,7 @@ define(['jquery', 'underscore', 'backbone'], ($, _, Backbone) =>
         url: url,
         method: 'GET',
         success: (data) ->
-          console.log data;
+          @set 'attributes', data
         error: (err) ->
           console.log err;
       }
