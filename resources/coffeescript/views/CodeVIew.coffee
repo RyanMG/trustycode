@@ -1,4 +1,9 @@
-define(['jquery', 'underscore', 'backbone', 'text!templates/sections/code.html', '../models/ModalData'], ($, _, Backbone, code, ModalData) =>
+define(['jquery',
+        'underscore',
+        'backbone',
+        'text!templates/sections/code.html',
+        '../models/ModalData',
+        'views/ModalView'], ($, _, Backbone, code, ModalData, ModalView) =>
   class CodeView extends Backbone.View
 
     el: $('#code')
@@ -60,8 +65,9 @@ define(['jquery', 'underscore', 'backbone', 'text!templates/sections/code.html',
 
     loadModal: ->
       modalData = new ModalData { target: event.target.dataset.proj }
-      modelView = new ModelView { model: modelData }
-      modelView.render()
+      modalData.on 'loaded', =>
+        modalView = new ModalView { model: modalData }
+        modalView.render()
 
   CodeView
 )

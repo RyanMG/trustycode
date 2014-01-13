@@ -3,7 +3,7 @@
     __hasProp = {}.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
-  define(['jquery', 'underscore', 'backbone', 'text!templates/sections/code.html', '../models/ModalData'], function($, _, Backbone, code, ModalData) {
+  define(['jquery', 'underscore', 'backbone', 'text!templates/sections/code.html', '../models/ModalData', 'views/ModalView'], function($, _, Backbone, code, ModalData, ModalView) {
     var CodeView, _ref;
     CodeView = (function(_super) {
       __extends(CodeView, _super);
@@ -77,14 +77,18 @@
       };
 
       CodeView.prototype.loadModal = function() {
-        var modalData, modelView;
+        var modalData,
+          _this = this;
         modalData = new ModalData({
           target: event.target.dataset.proj
         });
-        modelView = new ModelView({
-          model: modelData
+        return modalData.on('loaded', function() {
+          var modalView;
+          modalView = new ModalView({
+            model: modalData
+          });
+          return modalView.render();
         });
-        return modelView.render();
       };
 
       return CodeView;

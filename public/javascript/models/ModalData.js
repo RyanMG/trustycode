@@ -20,11 +20,15 @@
       };
 
       ModalData.prototype.fetch = function(url) {
+        var _this = this;
         return $.ajax({
           url: url,
           method: 'GET',
           success: function(data) {
-            return this.set('attributes', data);
+            _this.set('title', data.title);
+            _this.set('img', data.img);
+            _this.set('description', data.description);
+            return _this.trigger('loaded');
           },
           error: function(err) {
             return console.log(err);

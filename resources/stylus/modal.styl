@@ -1,11 +1,71 @@
+white = #f9f8f5
+tan = #e0d9d5
+dkbrown = #764925
+offblack = #232732
+
 .modal-mask
+  z-index 9
   height 100%
   width 100%
   position fixed
+  top 0
+  left 0
   background-color #000
-  opacity 0.3
+  opacity 0.6
 
-.model-window
-  height 100px
-  width 100px
+.modal-window
+  z-index 10
+  height 600px
+  width 600px
   background-color #fff
+  position fixed
+  top 50%
+  left 50%
+  margin-top -300px
+  margin-left -300px
+  box-shadow 0px 2px 15px #333333
+
+  #close-modal
+    font-size 22px
+    padding-top 4px
+    font-weight 800
+    position absolute
+    top 0
+    right 0
+    margin-top -15px
+    margin-right -15px
+    height 40px
+    width 40px
+    border-radius 12px
+    background-color tan
+    border 2px solid offblack
+
+  #close-modal:hover
+    background-color #fff
+
+  #close-modal:focus
+    outline none
+
+  img.modal-full-img
+    height 526px
+    width 600px
+    padding 0
+    margin 0
+  
+  .modal-text-bar
+    width 100%
+    position absolute
+    bottom 0
+    background-color tan
+    height 75px
+
+    p.modal-title
+      font-weight 800
+      font-size 25px
+      color offblack
+      margin 9px 20px 0 20px
+
+    p.modal-description
+      font-size 12px
+      color offblack
+      margin 0px 20px

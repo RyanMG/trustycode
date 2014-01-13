@@ -9,8 +9,11 @@ define(['jquery', 'underscore', 'backbone'], ($, _, Backbone) =>
       $.ajax {
         url: url,
         method: 'GET',
-        success: (data) ->
-          @set 'attributes', data
+        success: (data) =>
+          @set 'title', data.title
+          @set 'img', data.img
+          @set 'description', data.description
+          @trigger 'loaded'
         error: (err) ->
           console.log err;
       }
