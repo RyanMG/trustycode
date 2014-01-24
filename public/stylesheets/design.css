@@ -6,6 +6,7 @@
 #design .designMain .main-content-left .center-button{margin-top:40px;margin-left:10px}
 #design .designMain .main-image-right{margin:20px 20px 0 0;height:493px;width:386px}
 #design .designPort{position:absolute;width:100%;left:100%;}
+#design .designPort p{font-size:20px;color:#232732;margin-top:200px;margin-bottom:200px;text-align:center}
 #design .designPort .center-button{margin-top:5px}
 #design .designPort ul{text-decoration:none;margin-bottom:0;}
 #design .designPort ul li.design-example-box{list-style:none;margin:10px;display:inline-block;height:200px;width:200px;border:#737373;background-color:#232732}
