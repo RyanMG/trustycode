@@ -6,7 +6,7 @@ define(['jquery',
         'views/ModalView'], ($, _, Backbone, code, ModalData, ModalView) =>
   class CodeView extends Backbone.View
 
-    el: $('#code')
+    CodeView.prototype.el = $('#code')
     
     events:
       'click #codePortfolio': 'loadCodePortfolio',

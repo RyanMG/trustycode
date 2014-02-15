@@ -1,6 +1,7 @@
 .DS_Store
 node_modules/*
 _mockups/*
+_deploys/*
 Ghost/*
 config/*
 .ebextensions/*

@@ -1,6 +1,6 @@
 define(['jquery', 'underscore', 'backbone', 'text!templates/sections/photo.html'], ($, _, Backbone, photo) =>
   class PhotoView extends Backbone.View
-    el: $('#photography'),
+    PhotoView.prototype.el = $('#photography')
 
     events:
       'click #photoPortfolio': 'loadPhotoPortfolio',
