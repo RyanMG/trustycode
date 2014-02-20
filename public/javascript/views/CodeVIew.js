@@ -76,11 +76,11 @@
         }, 1000);
       };
 
-      CodeView.prototype.loadModal = function() {
+      CodeView.prototype.loadModal = function(e) {
         var modalData,
           _this = this;
         modalData = new ModalData({
-          target: event.target.dataset.proj
+          target: e.target.dataset.proj
         });
         return modalData.on('loaded', function() {
           var modalView;

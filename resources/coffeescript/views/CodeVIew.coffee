@@ -63,8 +63,8 @@ define(['jquery',
         'margin-left': -( $(window).width() * 2 )
       }, 1000)
 
-    loadModal: ->
-      modalData = new ModalData { target: event.target.dataset.proj }
+    loadModal: (e) ->
+      modalData = new ModalData { target: e.target.dataset.proj }
       modalData.on 'loaded', =>
         modalView = new ModalView { model: modalData }
         modalView.render()
